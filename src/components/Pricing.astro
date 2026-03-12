@@ -1,0 +1,105 @@
+---
+const plans = [
+  {
+    name: 'Starter',
+    price: 'Contact Us',
+    description: 'For factoring firms and small lenders getting started with advanced scoring.',
+    features: [
+      '4D Scoring Model (Past, Present, Future, Behavioral)',
+      'Up to 500 companies',
+      '5 user seats',
+      'Basic connectors (KKB, Check)',
+      'PDF & CSV reports',
+      'Email support',
+    ],
+    highlight: false,
+  },
+  {
+    name: 'Enterprise',
+    price: 'Contact Us',
+    description: 'Full 5D Intelligence for banks and large financial institutions.',
+    features: [
+      'Full 5D Scoring (includes Intelligence)',
+      'Unlimited companies',
+      'Unlimited user seats',
+      'All connectors + OSINT suite',
+      'Darknet monitoring & news sentiment',
+      'Webhook integrations & API access',
+      'Custom scoring weights',
+      'Dedicated support & SLA',
+      'On-premise deployment option',
+    ],
+    highlight: true,
+  },
+  {
+    name: 'Custom',
+    price: 'Tailored',
+    description: 'White-label solutions with custom dimensions and integrations.',
+    features: [
+      'Everything in Enterprise',
+      'White-label branding',
+      'Custom scoring dimensions',
+      'Custom data connectors',
+      'Dedicated infrastructure',
+      'Training & onboarding',
+      'Priority engineering support',
+    ],
+    highlight: false,
+  },
+];
+---
+
+<section id="pricing" class="py-24 lg:py-32 relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-credex-500/10 border border-credex-500/20 mb-4">
+        <span class="text-credex-400 text-sm font-medium">Pricing</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
+        Plans That <span class="text-credex-400">Scale</span>
+      </h2>
+      <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+        From factoring firms to tier-1 banks. Choose the plan that fits your risk assessment needs.
+      </p>
+    </div>
+
+    <!-- Plan cards -->
+    <div class="grid lg:grid-cols-3 gap-6 lg:gap-8">
+      {plans.map(plan => (
+        <div class={`gradient-border p-8 flex flex-col ${plan.highlight ? 'ring-1 ring-credex-500/30 glow-green' : ''}`}>
+          {plan.highlight && (
+            <div class="text-xs font-bold text-credex-400 uppercase tracking-wider mb-4">Most Popular</div>
+          )}
+          <h3 class="text-xl font-bold text-white">{plan.name}</h3>
+          <div class="mt-4">
+            <span class="text-3xl font-black text-white">{plan.price}</span>
+          </div>
+          <p class="mt-3 text-sm text-gray-400">{plan.description}</p>
+
+          <ul class="mt-8 space-y-3 flex-1">
+            {plan.features.map(feature => (
+              <li class="flex items-start gap-3 text-sm">
+                <svg class="w-4 h-4 text-credex-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-300">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="#contact"
+            class={`mt-8 block text-center py-3 rounded-xl font-semibold text-sm transition-all duration-200 ${
+              plan.highlight
+                ? 'bg-credex-500 hover:bg-credex-600 text-surface-950 hover:shadow-lg hover:shadow-credex-500/20'
+                : 'border border-white/10 hover:border-credex-500/30 text-white hover:bg-white/5'
+            }`}
+          >
+            Get Started
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

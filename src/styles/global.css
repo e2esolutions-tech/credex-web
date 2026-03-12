@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-credex-50: #f0fdf4;
+  --color-credex-100: #dcfce7;
+  --color-credex-200: #bbf7d0;
+  --color-credex-300: #86efac;
+  --color-credex-400: #4ade80;
+  --color-credex-500: #22c55e;
+  --color-credex-600: #16a34a;
+  --color-credex-700: #15803d;
+
+  --color-surface-950: #030712;
+  --color-surface-900: #0a0f1a;
+  --color-surface-800: #111827;
+  --color-surface-700: #1e293b;
+  --color-surface-600: #334155;
+
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface-950);
+  color: #e2e8f0;
+  font-family: var(--font-display);
+}
+
+.glow-green {
+  box-shadow: 0 0 40px rgba(34, 197, 94, 0.15), 0 0 80px rgba(34, 197, 94, 0.05);
+}
+
+.glow-text {
+  text-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+}
+
+.gradient-border {
+  position: relative;
+  background: var(--color-surface-800);
+  border-radius: 1rem;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1rem;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.4), transparent 50%, rgba(34, 197, 94, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.radar-sweep { animation: radar-sweep 4s linear infinite; }
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  50% { transform: scale(1); opacity: 0.3; }
+  100% { transform: scale(0.8); opacity: 0.6; }
+}
+.pulse-ring { animation: pulse-ring 3s ease-in-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float { animation: float 6s ease-in-out infinite; }
+
+@keyframes score-fill {
+  from { width: 0; }
+}
+.score-fill { animation: score-fill 1.5s ease-out forwards; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.8s ease-out forwards; }
+
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+.count-up { animation: count-up 0.6s ease-out forwards; }

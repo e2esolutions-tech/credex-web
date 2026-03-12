@@ -1,0 +1,96 @@
+---
+const rows = [
+  { feature: 'Scoring Dimensions', traditional: '1D (Financial)', credex: '5D (Full Spectrum)' },
+  { feature: 'Financial Statement Analysis', traditional: true, credex: true },
+  { feature: 'Credit Bureau Integration', traditional: true, credex: true },
+  { feature: 'Future Risk Prediction', traditional: false, credex: true },
+  { feature: 'Behavioral Analysis (CV/HR)', traditional: false, credex: true },
+  { feature: 'OSINT / Threat Intelligence', traditional: false, credex: true },
+  { feature: 'Darknet Monitoring', traditional: false, credex: true },
+  { feature: 'News Sentiment Analysis', traditional: false, credex: true },
+  { feature: 'Social Media Signals', traditional: false, credex: true },
+  { feature: 'Sector Early Warning', traditional: false, credex: true },
+  { feature: 'Real-Time Score Updates', traditional: false, credex: true },
+  { feature: 'Multi-Tenant SaaS', traditional: 'Limited', credex: true },
+  { feature: 'API-First Architecture', traditional: 'Limited', credex: true },
+  { feature: 'Custom Connector Framework', traditional: false, credex: true },
+];
+---
+
+<section id="comparison" class="py-24 lg:py-32 relative">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-credex-500/10 border border-credex-500/20 mb-4">
+        <span class="text-credex-400 text-sm font-medium">Competitive Edge</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
+        Why <span class="text-credex-400">CredeX</span>?
+      </h2>
+      <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+        See how CredeX's 5D approach compares to traditional 1D credit scoring solutions.
+      </p>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="gradient-border overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-white/5">
+              <th class="text-left text-sm font-semibold text-gray-400 p-4 lg:p-6">Feature</th>
+              <th class="text-center text-sm font-semibold text-gray-500 p-4 lg:p-6 w-40">Traditional Scoring</th>
+              <th class="text-center text-sm font-semibold text-credex-400 p-4 lg:p-6 w-40 bg-credex-500/5">CredeX 5D</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr class={`border-b border-white/5 ${i % 2 === 0 ? '' : 'bg-white/[0.01]'}`}>
+                <td class="text-sm text-gray-300 p-4 lg:p-6 font-medium">{row.feature}</td>
+                <td class="text-center p-4 lg:p-6">
+                  {typeof row.traditional === 'boolean' ? (
+                    row.traditional ? (
+                      <span class="text-gray-400">
+                        <svg class="w-5 h-5 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                      </span>
+                    ) : (
+                      <span class="text-gray-600">
+                        <svg class="w-5 h-5 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                      </span>
+                    )
+                  ) : (
+                    <span class="text-xs text-gray-500 font-medium">{row.traditional}</span>
+                  )}
+                </td>
+                <td class="text-center p-4 lg:p-6 bg-credex-500/5">
+                  {typeof row.credex === 'boolean' ? (
+                    <span class="text-credex-400">
+                      <svg class="w-5 h-5 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                    </span>
+                  ) : (
+                    <span class="text-xs text-credex-400 font-bold">{row.credex}</span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+      {[
+        { value: '5D', label: 'Scoring Dimensions' },
+        { value: '10', label: 'Risk Rating Tiers' },
+        { value: '15+', label: 'Data Connectors' },
+        { value: '289', label: 'Automated Tests' },
+      ].map(stat => (
+        <div class="gradient-border p-6 text-center">
+          <div class="text-3xl lg:text-4xl font-black text-credex-400">{stat.value}</div>
+          <div class="text-sm text-gray-500 mt-1">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
