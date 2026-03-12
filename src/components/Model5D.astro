@@ -57,10 +57,10 @@ const dimensions = [
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-credex-500/10 border border-credex-500/20 mb-4">
         <span class="text-credex-400 text-base sm:text-sm font-medium">The Innovation</span>
       </div>
-      <h2 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
+      <h2 class="text-[2.5rem] sm:text-4xl lg:text-5xl font-bold text-white mt-4 leading-tight">
         The <span class="text-credex-400">5D</span> Scoring Model
       </h2>
-      <p class="mt-4 text-xl sm:text-lg text-gray-400 max-w-2xl mx-auto">
+      <p class="mt-4 text-xl sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
         Traditional credit scoring is 1-dimensional. CredeX sees the full picture through five orthogonal dimensions of risk.
       </p>
     </div>
@@ -72,7 +72,7 @@ const dimensions = [
           <div class="flex flex-col lg:flex-row lg:items-center gap-6">
             <!-- Left: Name & weight -->
             <div class="flex items-center gap-4 lg:w-48 shrink-0">
-              <div class={`px-3.5 py-2 sm:px-3 sm:py-1.5 rounded-lg border text-base sm:text-sm font-bold ${dim.colorClass}`}>
+              <div class={`px-4 py-2.5 sm:px-3 sm:py-1.5 rounded-lg border text-lg sm:text-sm font-bold ${dim.colorClass}`}>
                 {dim.weight}
               </div>
               <h3 class="text-2xl sm:text-xl font-bold text-white">{dim.name}</h3>
@@ -80,10 +80,10 @@ const dimensions = [
 
             <!-- Middle: Description -->
             <div class="flex-1">
-              <p class="text-gray-400 text-base sm:text-sm leading-relaxed">{dim.description}</p>
-              <div class="flex flex-wrap gap-2 mt-3">
+              <p class="text-gray-400 text-lg sm:text-sm leading-relaxed">{dim.description}</p>
+              <div class="flex flex-wrap gap-2.5 sm:gap-2 mt-4 sm:mt-3">
                 {dim.metrics.map(m => (
-                  <span class="px-2.5 py-1 sm:px-2 sm:py-0.5 bg-white/5 rounded text-sm sm:text-xs text-gray-500 font-mono">{m}</span>
+                  <span class="px-3 py-1.5 sm:px-2 sm:py-0.5 bg-white/5 rounded text-base sm:text-xs text-gray-500 font-mono">{m}</span>
                 ))}
               </div>
             </div>
@@ -91,10 +91,10 @@ const dimensions = [
             <!-- Right: Score bar -->
             <div class="lg:w-48 shrink-0">
               <div class="flex items-center gap-3">
-                <div class="flex-1 h-2 bg-surface-700 rounded-full overflow-hidden">
+                <div class="flex-1 h-3 sm:h-2 bg-surface-700 rounded-full overflow-hidden">
                   <div class={`h-full rounded-full score-fill ${dim.barColor}`} style={`width: ${parseInt(dim.weight)}%; animation-delay: ${i * 200}ms`}></div>
                 </div>
-                <span class="text-sm font-mono text-gray-400">{dim.weight}</span>
+                <span class="text-base sm:text-sm font-mono text-gray-400">{dim.weight}</span>
               </div>
             </div>
           </div>
@@ -105,8 +105,8 @@ const dimensions = [
     <!-- Formula -->
     <div class="mt-12 text-center">
       <div class="inline-block gradient-border p-6 lg:p-8">
-        <p class="text-sm sm:text-xs text-gray-500 uppercase tracking-wider mb-3">Composite Score Formula</p>
-        <code class="text-base sm:text-sm lg:text-base font-mono leading-relaxed">
+        <p class="text-base sm:text-xs text-gray-500 uppercase tracking-wider mb-3">Composite Score Formula</p>
+        <code class="text-lg sm:text-sm lg:text-base font-mono leading-relaxed">
           <span class="text-credex-400">Score</span>
           <span class="text-gray-500"> = </span>
           <span class="text-blue-400">Past</span><span class="text-gray-600">(.20)</span>
