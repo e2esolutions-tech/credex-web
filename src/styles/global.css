@@ -183,3 +183,55 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 .count-up { animation: count-up 0.6s ease-out forwards; }
+
+/* ========== Cinematic Hero Animations ========== */
+
+/* Hero title — cinematic fluid sizing */
+.hero-title-main {
+  font-size: clamp(2rem, 1rem + 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Staggered fade-in for hero elements */
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+.hero-fade {
+  opacity: 0;
+  animation: hero-fade-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Dimension score items stagger */
+@keyframes dimension-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.dimension-item {
+  opacity: 0;
+  animation: dimension-slide 0.5s ease-out forwards;
+}
+
+/* Scroll indicator dot animation */
+@keyframes scroll-dot-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.3; }
+}
+.scroll-dot {
+  animation: scroll-dot-bounce 2s ease-in-out infinite;
+}
