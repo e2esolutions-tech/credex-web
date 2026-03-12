@@ -1,7 +1,7 @@
 ---
 ---
 
-<section id="contact" class="py-24 lg:py-32 relative bg-surface-900/50">
+<section id="contact" class="py-20 sm:py-24 lg:py-32 relative bg-surface-900/50">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section header -->
     <div class="text-center mb-12">
@@ -21,30 +21,30 @@
       <form id="contact-form" class="space-y-6">
         <div class="grid sm:grid-cols-2 gap-6">
           <div>
-            <label class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+            <label class="block text-base sm:text-sm font-medium text-gray-300 mb-2">Full Name</label>
             <input type="text" name="name" required
-              class="w-full px-4 py-3 bg-surface-900 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors"
+              class="w-full px-4 py-3.5 sm:py-3 bg-surface-900 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors"
               placeholder="John Smith" />
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-300 mb-2">Work Email</label>
+            <label class="block text-base sm:text-sm font-medium text-gray-300 mb-2">Work Email</label>
             <input type="email" name="email" required
-              class="w-full px-4 py-3 bg-surface-900 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors"
+              class="w-full px-4 py-3.5 sm:py-3 bg-surface-900 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors"
               placeholder="john@company.com" />
           </div>
         </div>
 
         <div class="grid sm:grid-cols-2 gap-6">
           <div>
-            <label class="block text-sm font-medium text-gray-300 mb-2">Company</label>
+            <label class="block text-base sm:text-sm font-medium text-gray-300 mb-2">Company</label>
             <input type="text" name="company" required
-              class="w-full px-4 py-3 bg-surface-900 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors"
+              class="w-full px-4 py-3.5 sm:py-3 bg-surface-900 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors"
               placeholder="Acme Financial" />
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-300 mb-2">Organization Type</label>
+            <label class="block text-base sm:text-sm font-medium text-gray-300 mb-2">Organization Type</label>
             <select name="type" required
-              class="w-full px-4 py-3 bg-surface-900 border border-white/10 rounded-xl text-white focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors">
+              class="w-full px-4 py-3.5 sm:py-3 bg-surface-900 border border-white/10 rounded-xl text-white focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors">
               <option value="" class="bg-surface-800">Select...</option>
               <option value="bank" class="bg-surface-800">Bank</option>
               <option value="factoring" class="bg-surface-800">Factoring Company</option>
@@ -56,14 +56,14 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+          <label class="block text-base sm:text-sm font-medium text-gray-300 mb-2">Message</label>
           <textarea name="message" rows="4"
-            class="w-full px-4 py-3 bg-surface-900 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors resize-none"
+            class="w-full px-4 py-3.5 sm:py-3 bg-surface-900 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-credex-500/50 focus:ring-1 focus:ring-credex-500/20 transition-colors resize-none"
             placeholder="Tell us about your credit risk assessment needs..."></textarea>
         </div>
 
         <button type="submit"
-          class="w-full sm:w-auto px-8 py-4 bg-credex-500 hover:bg-credex-600 text-surface-950 font-bold text-base rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-credex-500/25">
+          class="w-full px-8 py-4 min-h-[48px] bg-credex-500 hover:bg-credex-600 text-surface-950 font-bold text-lg sm:text-base rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-credex-500/25">
           Request Demo
         </button>
       </form>

@@ -17,7 +17,7 @@ const rows = [
 ];
 ---
 
-<section id="comparison" class="py-24 lg:py-32 relative">
+<section id="comparison" class="py-20 sm:py-24 lg:py-32 relative">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section header -->
     <div class="text-center mb-16">
@@ -38,15 +38,15 @@ const rows = [
         <table class="w-full">
           <thead>
             <tr class="border-b border-white/5">
-              <th class="text-left text-sm font-semibold text-gray-400 p-4 lg:p-6">Feature</th>
-              <th class="text-center text-sm font-semibold text-gray-500 p-4 lg:p-6 w-40">Traditional Scoring</th>
-              <th class="text-center text-sm font-semibold text-credex-400 p-4 lg:p-6 w-40 bg-credex-500/5">CredeX 5D</th>
+              <th class="text-left text-base sm:text-sm font-semibold text-gray-400 p-4 lg:p-6">Feature</th>
+              <th class="text-center text-base sm:text-sm font-semibold text-gray-500 p-4 lg:p-6 w-28 sm:w-40">Traditional</th>
+              <th class="text-center text-base sm:text-sm font-semibold text-credex-400 p-4 lg:p-6 w-28 sm:w-40 bg-credex-500/5">CredeX 5D</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((row, i) => (
               <tr class={`border-b border-white/5 ${i % 2 === 0 ? '' : 'bg-white/[0.01]'}`}>
-                <td class="text-sm text-gray-300 p-4 lg:p-6 font-medium">{row.feature}</td>
+                <td class="text-base sm:text-sm text-gray-300 p-4 lg:p-6 font-medium">{row.feature}</td>
                 <td class="text-center p-4 lg:p-6">
                   {typeof row.traditional === 'boolean' ? (
                     row.traditional ? (
@@ -87,8 +87,8 @@ const rows = [
         { value: '289', label: 'Automated Tests' },
       ].map(stat => (
         <div class="gradient-border p-6 text-center">
-          <div class="text-3xl lg:text-4xl font-black text-credex-400">{stat.value}</div>
-          <div class="text-sm text-gray-500 mt-1">{stat.label}</div>
+          <div class="text-4xl sm:text-3xl lg:text-4xl font-black text-credex-400">{stat.value}</div>
+          <div class="text-base sm:text-sm text-gray-500 mt-1">{stat.label}</div>
         </div>
       ))}
     </div>
