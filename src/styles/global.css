@@ -28,14 +28,92 @@ body {
   background-color: var(--color-surface-950);
   color: #e2e8f0;
   font-family: var(--font-display);
-  font-size: 18px;
+  /* Fluid base: 17px @ 360px → 16px @ 1024px */
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
 }
 
-@media (min-width: 640px) {
-  body {
-    font-size: 16px;
-  }
+/* ========== Fluid Typography Utilities ========== */
+
+/* Section headings — large */
+.fluid-heading-xl {
+  font-size: clamp(2.25rem, 1.5rem + 3.5vw, 3.5rem);
+  line-height: 1.1;
 }
+
+/* Section headings — medium */
+.fluid-heading-lg {
+  font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+  line-height: 1.15;
+}
+
+/* Card titles */
+.fluid-heading-md {
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.5rem);
+  line-height: 1.25;
+}
+
+/* Body text — large */
+.fluid-body-lg {
+  font-size: clamp(1.05rem, 0.9rem + 0.7vw, 1.25rem);
+  line-height: 1.6;
+}
+
+/* Body text — base */
+.fluid-body {
+  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.05rem);
+  line-height: 1.6;
+}
+
+/* Body text — small */
+.fluid-body-sm {
+  font-size: clamp(0.85rem, 0.8rem + 0.3vw, 0.95rem);
+  line-height: 1.5;
+}
+
+/* Labels, badges, captions */
+.fluid-caption {
+  font-size: clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);
+  line-height: 1.4;
+}
+
+/* Huge display numbers (scores, stats) */
+.fluid-display {
+  font-size: clamp(3.5rem, 2.5rem + 4.5vw, 5rem);
+}
+
+/* Stat numbers */
+.fluid-stat {
+  font-size: clamp(2.25rem, 1.5rem + 3.5vw, 3rem);
+}
+
+/* Score in radar */
+.fluid-score {
+  font-size: clamp(4rem, 3rem + 4vw, 5rem);
+}
+
+/* Icon containers — fluid */
+.fluid-icon-lg {
+  width: clamp(3rem, 2.5rem + 2vw, 4rem);
+  height: clamp(3rem, 2.5rem + 2vw, 4rem);
+}
+
+.fluid-icon-md {
+  width: clamp(2.5rem, 2rem + 1.5vw, 3rem);
+  height: clamp(2.5rem, 2rem + 1.5vw, 3rem);
+}
+
+/* Radar visualization */
+.fluid-radar {
+  width: clamp(18rem, 14rem + 18vw, 24rem);
+  height: clamp(18rem, 14rem + 18vw, 24rem);
+}
+
+/* Chart area height */
+.fluid-chart {
+  height: clamp(12rem, 10rem + 6vw, 14rem);
+}
+
+/* ========== Existing Styles ========== */
 
 .glow-green {
   box-shadow: 0 0 40px rgba(34, 197, 94, 0.15), 0 0 80px rgba(34, 197, 94, 0.05);

@@ -51,39 +51,39 @@ const dimensions = [
 <section id="model" class="py-20 sm:py-24 lg:py-32 relative overflow-hidden">
   <div class="absolute inset-0 grid-bg opacity-50"></div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
     <!-- Section header -->
     <div class="text-center mb-16 lg:mb-20">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-credex-500/10 border border-credex-500/20 mb-4">
-        <span class="text-credex-400 text-base sm:text-sm font-medium">The Innovation</span>
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-credex-500/10 border border-credex-500/20 mb-4">
+        <span class="text-credex-400 fluid-caption font-medium">The Innovation</span>
       </div>
-      <h2 class="text-[2.5rem] sm:text-4xl lg:text-5xl font-bold text-white mt-4 leading-tight">
+      <h2 class="fluid-heading-lg font-bold text-white mt-4">
         The <span class="text-credex-400">5D</span> Scoring Model
       </h2>
-      <p class="mt-4 text-xl sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+      <p class="mt-4 fluid-body-lg text-gray-400 max-w-2xl mx-auto">
         Traditional credit scoring is 1-dimensional. CredeX sees the full picture through five orthogonal dimensions of risk.
       </p>
     </div>
 
     <!-- Dimensions -->
-    <div class="space-y-6">
+    <div class="space-y-5 sm:space-y-6">
       {dimensions.map((dim, i) => (
         <div class="gradient-border p-5 sm:p-6 lg:p-8 hover:bg-surface-700/30 transition-all duration-300">
-          <div class="flex flex-col lg:flex-row lg:items-center gap-6">
+          <div class="flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-6">
             <!-- Left: Name & weight -->
             <div class="flex items-center gap-4 lg:w-48 shrink-0">
-              <div class={`px-4 py-2.5 sm:px-3 sm:py-1.5 rounded-lg border text-lg sm:text-sm font-bold ${dim.colorClass}`}>
+              <div class={`px-4 py-2.5 rounded-lg border fluid-body font-bold ${dim.colorClass}`}>
                 {dim.weight}
               </div>
-              <h3 class="text-2xl sm:text-xl font-bold text-white">{dim.name}</h3>
+              <h3 class="fluid-heading-md font-bold text-white">{dim.name}</h3>
             </div>
 
             <!-- Middle: Description -->
             <div class="flex-1">
-              <p class="text-gray-400 text-lg sm:text-sm leading-relaxed">{dim.description}</p>
-              <div class="flex flex-wrap gap-2.5 sm:gap-2 mt-4 sm:mt-3">
+              <p class="text-gray-400 fluid-body">{dim.description}</p>
+              <div class="flex flex-wrap gap-2.5 mt-4">
                 {dim.metrics.map(m => (
-                  <span class="px-3 py-1.5 sm:px-2 sm:py-0.5 bg-white/5 rounded text-base sm:text-xs text-gray-500 font-mono">{m}</span>
+                  <span class="px-3 py-1.5 bg-white/5 rounded fluid-body-sm text-gray-500 font-mono">{m}</span>
                 ))}
               </div>
             </div>
@@ -94,7 +94,7 @@ const dimensions = [
                 <div class="flex-1 h-3 sm:h-2 bg-surface-700 rounded-full overflow-hidden">
                   <div class={`h-full rounded-full score-fill ${dim.barColor}`} style={`width: ${parseInt(dim.weight)}%; animation-delay: ${i * 200}ms`}></div>
                 </div>
-                <span class="text-base sm:text-sm font-mono text-gray-400">{dim.weight}</span>
+                <span class="fluid-body-sm font-mono text-gray-400">{dim.weight}</span>
               </div>
             </div>
           </div>
@@ -105,8 +105,8 @@ const dimensions = [
     <!-- Formula -->
     <div class="mt-12 text-center">
       <div class="inline-block gradient-border p-6 lg:p-8">
-        <p class="text-base sm:text-xs text-gray-500 uppercase tracking-wider mb-3">Composite Score Formula</p>
-        <code class="text-lg sm:text-sm lg:text-base font-mono leading-relaxed">
+        <p class="fluid-caption text-gray-500 uppercase tracking-wider mb-3">Composite Score Formula</p>
+        <code class="fluid-body font-mono leading-relaxed">
           <span class="text-credex-400">Score</span>
           <span class="text-gray-500"> = </span>
           <span class="text-blue-400">Past</span><span class="text-gray-600">(.20)</span>

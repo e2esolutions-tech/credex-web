@@ -50,16 +50,16 @@ const plans = [
 ---
 
 <section id="pricing" class="py-20 sm:py-24 lg:py-32 relative">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
     <!-- Section header -->
     <div class="text-center mb-16">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-credex-500/10 border border-credex-500/20 mb-4">
-        <span class="text-credex-400 text-base sm:text-sm font-medium">Pricing</span>
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-credex-500/10 border border-credex-500/20 mb-4">
+        <span class="text-credex-400 fluid-caption font-medium">Pricing</span>
       </div>
-      <h2 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
+      <h2 class="fluid-heading-lg font-bold text-white mt-4">
         Plans That <span class="text-credex-400">Scale</span>
       </h2>
-      <p class="mt-4 text-xl sm:text-lg text-gray-400 max-w-2xl mx-auto">
+      <p class="mt-4 fluid-body-lg text-gray-400 max-w-2xl mx-auto">
         From factoring firms to tier-1 banks. Choose the plan that fits your risk assessment needs.
       </p>
     </div>
@@ -67,20 +67,20 @@ const plans = [
     <!-- Plan cards -->
     <div class="grid lg:grid-cols-3 gap-6 lg:gap-8">
       {plans.map(plan => (
-        <div class={`gradient-border p-8 flex flex-col ${plan.highlight ? 'ring-1 ring-credex-500/30 glow-green' : ''}`}>
+        <div class={`gradient-border p-7 sm:p-8 flex flex-col ${plan.highlight ? 'ring-1 ring-credex-500/30 glow-green' : ''}`}>
           {plan.highlight && (
-            <div class="text-xs font-bold text-credex-400 uppercase tracking-wider mb-4">Most Popular</div>
+            <div class="fluid-caption font-bold text-credex-400 uppercase tracking-wider mb-4">Most Popular</div>
           )}
-          <h3 class="text-3xl sm:text-xl font-bold text-white">{plan.name}</h3>
+          <h3 class="fluid-heading-md font-bold text-white">{plan.name}</h3>
           <div class="mt-4">
-            <span class="text-4xl sm:text-3xl font-black text-white">{plan.price}</span>
+            <span class="fluid-stat font-black text-white">{plan.price}</span>
           </div>
-          <p class="mt-3 text-lg sm:text-sm text-gray-400">{plan.description}</p>
+          <p class="mt-3 fluid-body text-gray-400">{plan.description}</p>
 
           <ul class="mt-8 space-y-3 flex-1">
             {plan.features.map(feature => (
-              <li class="flex items-start gap-3 text-lg sm:text-sm">
-                <svg class="w-6 h-6 sm:w-4 sm:h-4 text-credex-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <li class="flex items-start gap-3 fluid-body">
+                <svg style="width:clamp(1.1rem,0.9rem+0.6vw,1.25rem);height:clamp(1.1rem,0.9rem+0.6vw,1.25rem)" class="text-credex-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                 </svg>
                 <span class="text-gray-300">{feature}</span>
@@ -90,7 +90,7 @@ const plans = [
 
           <a
             href="#contact"
-            class={`mt-8 block w-full text-center py-4 sm:py-3 rounded-xl font-semibold text-base sm:text-sm min-h-[48px] transition-all duration-200 ${
+            class={`mt-8 block w-full text-center py-4 rounded-xl font-semibold fluid-body min-h-[52px] transition-all duration-200 flex items-center justify-center ${
               plan.highlight
                 ? 'bg-credex-500 hover:bg-credex-600 text-surface-950 hover:shadow-lg hover:shadow-credex-500/20'
                 : 'border border-white/10 hover:border-credex-500/30 text-white hover:bg-white/5'
