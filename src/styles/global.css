@@ -42,7 +42,7 @@ body {
 
 /* Section headings — medium */
 .fluid-heading-lg {
-  font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
   line-height: 1.15;
 }
 
@@ -81,9 +81,9 @@ body {
   font-size: clamp(3.5rem, 2.5rem + 4.5vw, 5rem);
 }
 
-/* Stat numbers */
+/* Stat numbers — smaller than section headings */
 .fluid-stat {
-  font-size: clamp(2.25rem, 1.5rem + 3.5vw, 3rem);
+  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.25rem);
 }
 
 /* Score in radar */

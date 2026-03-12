@@ -17,13 +17,13 @@ const navLinks = [
         <div class="w-9 h-9 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br from-credex-400 to-credex-600 flex items-center justify-center">
           <span class="text-surface-950 font-bold fluid-caption">CX</span>
         </div>
-        <span class="fluid-heading-md font-bold text-white">Crede<span class="text-credex-400">X</span></span>
+        <span class="fluid-body-lg font-bold text-white">Crede<span class="text-credex-400">X</span></span>
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden lg:flex items-center gap-8">
         {navLinks.map(link => (
-          <a href={link.href} class="text-sm text-gray-400 hover:text-credex-400 transition-colors duration-200">
+          <a href={link.href} class="fluid-body-sm text-gray-400 hover:text-credex-400 transition-colors duration-200">
             {link.label}
           </a>
         ))}
@@ -31,7 +31,7 @@ const navLinks = [
 
       <!-- CTA -->
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#contact" class="px-5 py-2.5 bg-credex-500 hover:bg-credex-600 text-surface-950 font-semibold text-sm rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-credex-500/20">
+        <a href="#contact" class="px-5 py-2.5 bg-credex-500 hover:bg-credex-600 text-surface-950 font-semibold fluid-body-sm rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-credex-500/20">
           Request Demo
         </a>
       </div>
