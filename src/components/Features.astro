@@ -38,12 +38,12 @@ const features = [
     <!-- Section header -->
     <div class="text-center mb-16 lg:mb-20">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-credex-500/10 border border-credex-500/20 mb-4">
-        <span class="text-credex-400 text-sm font-medium">Core Capabilities</span>
+        <span class="text-credex-400 text-base sm:text-sm font-medium">Core Capabilities</span>
       </div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
+      <h2 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
         Enterprise-Grade, <span class="text-credex-400">By Design</span>
       </h2>
-      <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+      <p class="mt-4 text-xl sm:text-lg text-gray-400 max-w-2xl mx-auto">
         Every component built for financial institutions that demand accuracy, security, and reliability.
       </p>
     </div>
@@ -53,8 +53,8 @@ const features = [
       {features.map((feature, i) => (
         <div class="gradient-border p-7 sm:p-6 lg:p-8 hover:bg-surface-700/50 transition-all duration-300 group" style={`animation-delay: ${i * 100}ms`}>
           <div class="w-14 h-14 sm:w-12 sm:h-12 rounded-xl bg-credex-500/10 flex items-center justify-center text-credex-400 group-hover:bg-credex-500/20 transition-colors" set:html={feature.icon} />
-          <h3 class="mt-5 text-lg font-semibold text-white">{feature.title}</h3>
-          <p class="mt-3 text-gray-400 leading-relaxed text-base sm:text-sm">{feature.description}</p>
+          <h3 class="mt-5 text-xl sm:text-lg font-semibold text-white">{feature.title}</h3>
+          <p class="mt-3 text-gray-400 leading-relaxed text-[17px] sm:text-sm">{feature.description}</p>
         </div>
       ))}
     </div>

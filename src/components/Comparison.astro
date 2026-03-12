@@ -22,12 +22,12 @@ const rows = [
     <!-- Section header -->
     <div class="text-center mb-16">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-credex-500/10 border border-credex-500/20 mb-4">
-        <span class="text-credex-400 text-sm font-medium">Competitive Edge</span>
+        <span class="text-credex-400 text-base sm:text-sm font-medium">Competitive Edge</span>
       </div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
+      <h2 class="text-4xl sm:text-4xl lg:text-5xl font-bold text-white mt-4">
         Why <span class="text-credex-400">CredeX</span>?
       </h2>
-      <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+      <p class="mt-4 text-xl sm:text-lg text-gray-400 max-w-2xl mx-auto">
         See how CredeX's 5D approach compares to traditional 1D credit scoring solutions.
       </p>
     </div>
@@ -38,15 +38,15 @@ const rows = [
         <table class="w-full">
           <thead>
             <tr class="border-b border-white/5">
-              <th class="text-left text-base sm:text-sm font-semibold text-gray-400 p-4 lg:p-6">Feature</th>
-              <th class="text-center text-base sm:text-sm font-semibold text-gray-500 p-4 lg:p-6 w-28 sm:w-40">Traditional</th>
-              <th class="text-center text-base sm:text-sm font-semibold text-credex-400 p-4 lg:p-6 w-28 sm:w-40 bg-credex-500/5">CredeX 5D</th>
+              <th class="text-left text-[15px] sm:text-sm font-semibold text-gray-400 p-3 sm:p-4 lg:p-6">Feature</th>
+              <th class="text-center text-[15px] sm:text-sm font-semibold text-gray-500 p-3 sm:p-4 lg:p-6 w-24 sm:w-40">Traditional</th>
+              <th class="text-center text-[15px] sm:text-sm font-semibold text-credex-400 p-3 sm:p-4 lg:p-6 w-24 sm:w-40 bg-credex-500/5">CredeX 5D</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((row, i) => (
               <tr class={`border-b border-white/5 ${i % 2 === 0 ? '' : 'bg-white/[0.01]'}`}>
-                <td class="text-base sm:text-sm text-gray-300 p-4 lg:p-6 font-medium">{row.feature}</td>
+                <td class="text-[15px] sm:text-sm text-gray-300 p-3 sm:p-4 lg:p-6 font-medium">{row.feature}</td>
                 <td class="text-center p-4 lg:p-6">
                   {typeof row.traditional === 'boolean' ? (
                     row.traditional ? (
